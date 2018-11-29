@@ -18,7 +18,7 @@ def test_get_template_text_open_file_success():
 def test_get_template_text_open_file_returns_string():
     """Test that return value returned is a string."""
     filename = 'template.txt'
-    assert type(get_template_text(filename)) == 'str'
+    assert type(get_template_text(filename)) == str
 
 
 def test_parse_template_text():
