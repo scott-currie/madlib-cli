@@ -38,6 +38,12 @@ def print_formatted_text(template_text):
     print(template_text)
 
 
+def write_to_file(filename, template_text):
+    """Open a file for writing and write the template_text into it."""
+    with open(filename, 'w') as out_file:
+        out_file.write(template_text)
+
+
 def run():
     """Enter script execution."""
     print_intro()
@@ -47,6 +53,8 @@ def run():
     responses = get_user_responses(prompts)
     template_text = format_template_text(template_text, responses)
     print_formatted_text(template_text)
+    out_filename = 'madlib.txt'
+    write_to_file(out_filename, template_text)
 
 
 if __name__ == '__main__':
